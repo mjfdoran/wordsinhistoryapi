@@ -1,0 +1,23 @@
+{
+    "require": {
+        "slim/slim": "~3.0",
+        "robmorgan/phinx": "~0.6.5",
+        "spiechu/lazy-pimple": "~0.3",
+        "vlucas/phpdotenv": "~2.4",
+        "fzaninotto/faker": "~1.6"        
+    },
+    "autoload": {
+        "classmap": [
+            "wih/controllers",
+            "wih/models",
+            "wih/services",
+            "wih/exceptions"
+        ],
+        "files" : [
+            "wih/Helper.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/dbunit": "^2.0"
+    }
+}

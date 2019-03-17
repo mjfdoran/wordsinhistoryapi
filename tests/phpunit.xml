@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./../vendor/autoload.php">
+    <php>
+        <env name="DB_HOST" value="127.0.0.1"/>
+        <env name="DB_NAME" value="wih_test"/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="DB_PASSWORD" value="root"/>
+        <env name="DEBUG" value="true"/>
+    </php>
+</phpunit>

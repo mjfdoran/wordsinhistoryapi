@@ -1,0 +1,83 @@
+ALTER TABLE `likes`
+ADD CONSTRAINT fk_user_id
+FOREIGN KEY (user_id)
+REFERENCES `users` (id);
+
+ALTER TABLE quotes
+ADD CONSTRAINT fk_person_id
+FOREIGN KEY (person_id)
+REFERENCES people(id);
+
+ALTER TABLE quotes
+ADD CONSTRAINT fk_book_id
+FOREIGN KEY (book_id)
+REFERENCES books(id);
+
+ALTER TABLE quotes
+ADD CONSTRAINT fk_song_id
+FOREIGN KEY (song_id)
+REFERENCES songs(id);
+
+ALTER TABLE quotes
+ADD CONSTRAINT fk_film_id
+FOREIGN KEY (film_id)
+REFERENCES films(id);
+
+ALTER TABLE quotes
+ADD CONSTRAINT fk_user_id3
+FOREIGN KEY (user_id)
+REFERENCES users(id);
+
+ALTER TABLE users
+ADD CONSTRAINT fk_person_id2
+FOREIGN KEY (person_id)
+REFERENCES people(id);
+
+ALTER TABLE quotes
+ADD CONSTRAINT fk_langauge2
+FOREIGN KEY (language)
+REFERENCES languages(language);
+
+ALTER TABLE books
+ADD CONSTRAINT fk_langauge_books
+FOREIGN KEY (language)
+REFERENCES languages(language);
+
+ALTER TABLE films
+ADD CONSTRAINT fk_langauge_films
+FOREIGN KEY (language)
+REFERENCES languages(language);
+
+ALTER TABLE songs
+ADD CONSTRAINT fk_langauge_songs
+FOREIGN KEY (language)
+REFERENCES languages(language);
+
+ALTER TABLE users
+ADD CONSTRAINT fk_langauge_users
+FOREIGN KEY (language)
+REFERENCES languages(language);
+
+ALTER TABLE `likes`
+ADD CONSTRAINT fk_delete_likes
+FOREIGN KEY (quote_id)
+REFERENCES `quotes` (id)
+ON DELETE CASCADE;
+
+ALTER TABLE `likes`
+ADD CONSTRAINT fk_delete_users
+FOREIGN KEY (user_id)
+REFERENCES `users` (id)
+ON DELETE CASCADE;
+
+ALTER TABLE `fakes`
+ADD CONSTRAINT fk_delete_quotes
+FOREIGN KEY (quote_id)
+REFERENCES `quotes` (id)
+ON DELETE CASCADE;
+
+ALTER TABLE `fakes`
+ADD CONSTRAINT fk_delete_users2
+FOREIGN KEY (user_id)
+REFERENCES `users` (id)
+ON DELETE CASCADE;

@@ -1,0 +1,23 @@
+sudo apt-get install software-properties-common python-software-properties
+
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get update
+
+sudo apt-get install php7.0
+
+sudo apt-get install vim
+
+sudo service nginx restart
+
+
+//locally i only ran the first two lines
+sudo apt-get update
+sudo apt-get install mysql-server
+#sudo mysql_secure_installation
+#sudo mysql_install_db
+
+#main user is root root
+create database wihapi_local;
+CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'vagrant';
+GRANT ALL PRIVILEGES ON wihapi_local.* TO 'vagrant'@'localhost';
